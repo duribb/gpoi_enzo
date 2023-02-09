@@ -3,10 +3,10 @@
 		<title>Caricamento file</title>
 	</head>
 	<body>
-		<form action="caricatoreFileArhcivioDb.php">
+		<form action="caricatoreFileArhcivioDb.php" method="post" enctype="multipart/form-data">
 			<label for="selezioneFileDaArchivioLocale">Seleziona uno o più file</label><br>
 			<input type="file" id="selezioneFileDaArchivioLocale" name="elencoFiles" multiple><br>
-			<input type="submit" id="invio">
+			<input type="submit" id="invio" value="Carica File">
 		</form>
 	</body>
 </html>
@@ -14,5 +14,5 @@
 <!--
 Esempio query string passata alla pagina caricatoreFileArhcivioDb.php
 
-(url della pagina php)/elencoFiles=esercizioSql6_4.pdf&elencoFiles=Git-2.39.1-64-bit.exe&elencoFiles=CityTextureUHI_Feb2
+(url della pagina php)/elencoFiles=esercizioSql6_4.pdf&elencoFiles=Git-2.39.1-64-bit.exe
 -->
