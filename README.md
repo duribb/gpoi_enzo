@@ -44,7 +44,8 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
 ###### - visualizzazione lista risultati (8)
 
 
-##### spiegazione non sintetica del funzionamento
+##### spiegazione non sintetica del funzionamento:
+
 (S3) l'utente carica i file dalla pagina web
 (S1) i file vengono caricati sull archivio e nomi e path sul db
 (E1) enzo tramite un batch sposta i file in una cartella apposita, 
@@ -53,3 +54,34 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
 (E4) i txt vengono eliminati e i file spostati in una cartella del tipo 'analizzati' e il db viene caricato con path e tag
 (M1) l'utente può selezionare alcuni tag e (S2) viene creata una query apposita da inviare al db
 (M) i file vengono prelevati dall archivio (in base ai risultati della query) e (M2) viene creato uno zip da restituire all utente che può essere scaricato
+
+
+##### git e features:
+
+### M
+#### - interfaccia per ricerca tramite filtri (5)
+#### - creazione e fornitura file zip (13)
+
+### S
+#### - caricatore file sull'archivio remoto e sul relativo database (13)
+#### - generatore query con dati (tag) forniti dalla barra di ricerca (8)
+elaboratoreDiRicerca.php
+
+#### - interfaccia utente che riceve uno o più file in input (14)
+interfacciaCaricamentoUtente.html
+
+### E
+#### - prelevatore file dal database e dall'archivio (6.5)
+#### - un lettore file per ogni tipo di file possibile da inserire (40)
+lettoreFilePerTipo.java
+TrovaEstensione.java
+#### - assegantore di tag (tramite parole chiave e altri file) (100)
+#### - caricatore tag (assegati ai file) nel database (3)
+
+### I
+#### - caricamento file (8)
+#### - ricerca per filtri (4)
+#### - visualizzazione lista risultati (8)
+
+### ALERT
+scriptCreazioneDB.sql
