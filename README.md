@@ -42,3 +42,14 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
 ###### - caricamento file (8)
 ###### - ricerca per filtri (4)
 ###### - visualizzazione lista risultati (8)
+
+
+##### spiegazione non sintetica del funzionamento
+(S3) l'utente carica i file dalla pagina web
+(S1) i file vengono caricati sull archivio e nomi e path sul db
+(E1) enzo tramite un batch sposta i file in una cartella apposita, 
+    utilizza il (E2) lettore file in base al tipo del file (che restituisce un txt), 
+    analizza i txt e (E3) assegna i tag al file
+(E4) i txt vengono eliminati e i file spostati in una cartella del tipo 'analizzati' e il db viene caricato con path e tag
+(M1) l'utente può selezionare alcuni tag e (S2) viene creata una query apposita da inviare al db
+(M) i file vengono prelevati dall archivio (in base ai risultati della query) e (M2) viene creato uno zip da restituire all utente che può essere scaricato
