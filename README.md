@@ -63,6 +63,7 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
 
 ### S
 #### - caricatore file sull'archivio remoto e sul relativo database (13)
+caricatoreFileArhcivioDb.php
 #### - generatore query con dati (tag) forniti dalla barra di ricerca (8)
 elaboratoreDiRicerca.php
 
