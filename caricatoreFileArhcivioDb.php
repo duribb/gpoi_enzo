@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Si è verificato un errore durante il caricamento del file.";
       }
     }
-    $connessione->clolse();
+    $connessione->close();
   }
 }
 ?>
