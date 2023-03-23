@@ -1,6 +1,6 @@
 --script creazione database
 
-CREATE DATABASE TAGDB
+CREATE DATABASE TAGDB;
 
 CREATE TABLE FILES(
 	nomefile VARCHAR(40), 
