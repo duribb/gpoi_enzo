@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connessione = new mysqli($nomehost, $nomeuser, $password, $database);
 
     if($connessione === false){
-      die("Errore nella connessione al database: " . $connessione->connect_error);
+      die("Errore nella connessione al database: " . $connessione);
     }
 
     for ($i = 0; $i < $file_count; $i++) {
