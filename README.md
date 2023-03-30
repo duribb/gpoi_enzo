@@ -52,8 +52,7 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
     utilizza il (E2) lettore file in base al tipo del file (che restituisce un txt), 
     analizza i txt e (E3) assegna i tag al file
 (E4) i txt vengono eliminati e i file spostati in una cartella del tipo 'analizzati' e il db viene caricato con path e tag
-(M1) l'utente può selezionare alcuni tag e (S2) viene creata una query apposita da inviare al db
-(M) i file vengono prelevati dall archivio (in base ai risultati della query) e (M2) viene creato uno zip da restituire all utente che può essere scaricato
+(M1) l'utente può selezionare alcuni tag e (S2) viene creata una query apposita da inviare al db(A) i file vengono prelevati dall archivio (in base ai risultati della query) e (M2) viene creato uno zip da restituire all utente che può essere scaricato.
 
 
 ##### git e features:
@@ -64,6 +63,7 @@ Va curata l'interfaccia grafica in modo da essere il più possibile user friendl
 
 ### S
 #### - caricatore file sull'archivio remoto e sul relativo database (13)
+caricatoreFileArhcivioDb.php
 #### - generatore query con dati (tag) forniti dalla barra di ricerca (8)
 elaboratoreDiRicerca.php
 
@@ -85,3 +85,4 @@ TrovaEstensione.java
 
 ### ALERT
 scriptCreazioneDB.sql
+directory 'archivio'
