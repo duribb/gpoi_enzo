@@ -75,6 +75,10 @@ interfacciaCaricamentoUtente.html
 
 ### E
 #### - prelevatore file dal database e dall'archivio (6.5)
+waitingToRaw.txt
+waitingToRaw.bat
+rawToProcessed.txt
+rawToProcessed.bat
 #### - un lettore file per ogni tipo di file possibile da inserire (40)
 lettoreFilePerTipo.java
 TrovaEstensione.java
