@@ -1,5 +1,5 @@
-CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; 
+CREATE USER 'enzo'@'%' IDENTIFIED BY 'enzo'; 
 
-GRANT ALL PRIVILEGES ON *.* TO ‘username’@'localhost';
+GRANT ALL PRIVILEGES ON tagdb.* TO ‘enzo’@'%';
 
 FLUSH PRIVILEGES;
