@@ -14,7 +14,7 @@
         $tag = trovaTag($tag);
         
         //$query = 'SELECT nomefile, tag'.PHP_EOL.'FROM enzo'.PHP_EOL.'WHERE ';
-        $query = 'SELECT percorso FROM files, enzo WHERE enzo.nomefile=files.nomefile AND'
+        $query = 'SELECT percorso FROM files, enzo WHERE enzo.nomefile=files.nomefile AND ';
         //In caso ci siano più tag aggiunge dopo il where le condizioni
         $query = $query.'tag = '.'"'.$tag[0].'"';
         for($i=1; $i<count($tag); $i++){
@@ -25,4 +25,6 @@
         $query = 'SELECT nomeFile, tag FROM file';
         //slezione tutti file in caso non ci siano tag selezionati
     }
+
+    //echo $query;
 ?>
