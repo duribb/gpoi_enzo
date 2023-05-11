@@ -1,5 +1,0 @@
-CREATE USER 'enzo'@'%' IDENTIFIED BY 'enzo'; 
-
-GRANT ALL PRIVILEGES ON tagdb.* TO ‘enzo’@'%';
-
-FLUSH PRIVILEGES;
