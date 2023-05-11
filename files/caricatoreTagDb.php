@@ -1,3 +1,4 @@
+<?php include 'connessione.php' ?>
 <?php
     function inserisciAssociazione($tags, $conn) {
         //print_r($tags);
@@ -28,17 +29,7 @@
         $query = "UPDATE files SET percorso=\"working/processed\" WHERE nomefile=\"".$nomefile."\"";
         //echo $query."<br>";
         $conn->query($query);
-    }
-    
-
-    $nomehost = 'localhost';
-    $nomeuser = 'root';
-    $password = '';
-    $database = 'TAGDB';
-    $connessione = new mysqli($nomehost, $nomeuser, $password, $database);
-    if ($connessione->connect_error) 
-        die ("connessione fallita");
-    
+    }    
 
     //legge il file
 

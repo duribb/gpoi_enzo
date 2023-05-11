@@ -1,7 +1,7 @@
 <?php
     $nomehost = 'localhost';
-    $nomeuser = 'enzo';
-    $password = 'enzo';
+    $nomeuser = 'root';
+    $password = '';
     $database = 'TAGDB';
     $connessione = new mysqli($nomehost, $nomeuser, $password, $database);
 
