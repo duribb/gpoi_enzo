@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       if (move_uploaded_file($file_tmp, $upload_path)) {
         echo 'Il file '.$file_name.' è stato caricato con successo.';
-        $sql = 'INSERT INTO files (nomefile, percorso) VALUES ($file_name, $upload_path)';
+        $sql = 'INSERT INTO files (nomefile, percorso) VALUES ('.$file_name.', '.$upload_path.')';
         if($connessione->query($sql) === true){
           echo 'caricamento file su db avvenuto con successo';
         }else{
