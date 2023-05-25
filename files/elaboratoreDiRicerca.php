@@ -13,16 +13,20 @@
         $tag = explode("&", $var);
         $tag = trovaTag($tag);
         
+        //for($i=0; $i<count($tag); $i++) echo $tag[$i];
+
+        //seleziona i file a cui sono assegnati TUTTI i tag ricercati
+
         //$query = 'SELECT nomefile, tag'.PHP_EOL.'FROM enzo'.PHP_EOL.'WHERE ';
-        $query = 'SELECT percorso FROM files, enzo WHERE enzo.nomefile=files.nomefile AND ';
+        $query = 'SELECT f.nomefile, f.percorso FROM files as f, enzo as e WHERE e.nomefile=f.nomefile AND ';
         //In caso ci siano più tag aggiunge dopo il where le condizioni
-        $query = $query.'tag = '.'"'.$tag[0].'"';
+        $query = $query.'e.tag = '.'"'.$tag[0].'"';
         for($i=1; $i<count($tag); $i++){
-            $query = $query.' AND  tag = '.'"'.$tag[$i].'"';
+            $query = $query.' AND  e.tag = '.'"'.$tag[$i].'"';
         }
 
     } else { //se non ci sono parametri nell'url
-        $query = 'SELECT nomeFile, tag FROM file';
+        $query = 'SELECT nomefile, percorso FROM file';
         //slezione tutti file in caso non ci siano tag selezionati
     }
 

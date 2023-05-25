@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<p>Selezionare i tag desiderati (Per selezionare più tag premere il tasto SHIFT):</p>
-		<form action="elaboratoreDiRicerca.php" method="get">
+		<form action="fornitoreZip.php" method="get">
 			<select multiple size="4" name="listaTag">
 				<?php include 'connessione.php' ?>
 				<?php
