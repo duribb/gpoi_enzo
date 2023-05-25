@@ -24,6 +24,8 @@ public class Main {
                 System.out.println("Il nome del file selezionato dovrebbe essere: " + nome_file);
                 file1 = new File(String.valueOf(file));
                 input.AnalizzaTutto("parole_ricerca.txt", nome_file, file.toFile().getPath());
+                System.out.println("Il file da eliminare e': " + file1);
+                file1.delete();
             }
 
 

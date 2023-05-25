@@ -15,7 +15,18 @@ public class Tags {
 
     public void setTag(String tag) {
         System.out.println("Il tag che ho ricevuto e': " + tag);
-        this.tag.add(tag);
+            this.tag.add(tag);
+        }
+
+        public int esiste(String parola ){
+            for (String tag: getTag()) {
+                if (parola.equals(tag)){
+                    return 1;
+                }
+            }
+            return 0;
+        }
+
     }
 
-}
+

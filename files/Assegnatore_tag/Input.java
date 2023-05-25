@@ -50,6 +50,7 @@ public class Input {
         System.out.println("----------------");
         ArrayList<String> contenuto_file;
         contenuto_file = leggiFile(path);
+        String estensione = contenuto_file.get(0);
         System.out.println("Elenco delle righe lette nel contenuto del file: \n");
         System.out.println(contenuto_file);
         System.out.println("-----------------");
@@ -57,15 +58,15 @@ public class Input {
         System.out.println("Adesso analizzo titolo\n");
         for (String parola:
              elenco_tags) {
-            System.out.println(parola);
             if(trovaParolaDaStringa(parola, titolo) == 0){
                 System.out.println("ho trovato una parola nel titolo");
-                tag.setTag(parola);
+                if (tag.esiste(parola) == 0) tag.setTag(parola);
             }
             else if(trovaParolaDaFile(parola, contenuto_file) == 0){
                 System.out.println("ho trovato una parola nel file");
-                tag.setTag(parola);
+                if (tag.esiste(parola) == 0) tag.setTag(parola);
             }
+
 
         }
 
@@ -76,7 +77,7 @@ public class Input {
             if (fileExist) {
                 writer.newLine();
             }
-            writer.write(titolo + ";");
+            writer.write(titolo+ estensione + ";");
             writer.write(String.join(";", tag.getTag()));
         } catch (IOException e) {
             System.err.println("Error writing CSV file: " + e.getMessage());
@@ -111,8 +112,11 @@ public class Input {
             line = reader.readLine();
 
         }
+        reader.close();
         return elenco_tag;
     }
+
+
 
 
 }
