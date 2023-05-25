@@ -35,4 +35,3 @@ alunno
 alunni
 personale ata
 segreteria
-
